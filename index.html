@@ -4,36 +4,147 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/main.css">
   <title>Template site</title>
 </head>
 <body>
-  <!-- HEADER START -->
-  <header class="header">
-    <div class="container">
-      <h2 class="header__title">Hello user! This template is for used</h2>
-    </div>
-  </header>
-  <!-- HEADER END -->
-
-  <!-- MAIN START -->
+  <h1 class="visually-hidden">Pizza order</h1>
   <main>
     <!-- hero-section start -->
-    <section class="hero">
+    <section class="order">
       <div class="container">
+        <h2 class="order__title text-center my-4">Pitsa buyurtma qilish</h2>
+        <div class="row">
+          <div class="col-8 border border-3 border-dark p-3">
+            <form action="https://echo.htmlacademy.ru/" class="form d-flex flex-column gap-4">
+              <div class="order__select-box d-flex flex-column gap-2">
+                <h3 class="order__select-box-title fs-4 fw-bold">Pitsa noni qanday bo'lsin?</h3>
+                <select class="form-select fs-5 fw-bold" aria-label="Default select example">
+                  <option value="yupqa">Yupqa</option>
+                  <option value="qalin">Qalin</option>
+                  <option value="normal">Normal</option>
+                </select>
+              </div>
 
+              <div class="order__dimension d-flex flex-column gap-5 mb-4">
+                <h3 class="order__dimension-title fs-4 fw-bold">Kattaligi: </h3>
+                <ul class="order__domension-list d-flex gap-5">
+                  <li class="order__domension-list-item">
+                    <label class="order__domension-item-label">
+                      <input class="order__dimension-input" type="radio" name="dimension">
+                      <span class="order__dimension-span fs-4 fw-bold" id="dimension-span1">25 sm</span>
+                    </label>
+                  </li>
+
+                  <li class="order__domension-list-item">
+                    <label class="order__domension-item-label">
+                      <input class="order__dimension-input" type="radio" name="dimension">
+                      <span class="order__dimension-span fs-4 fw-bold" id="dimension-span2">30 sm</span>
+                    </label>
+                  </li>
+
+                  <li class="order__domension-list-item">
+                    <label class="order__domension-item-label">
+                      <input class="order__dimension-input" type="radio" name="dimension">
+                      <span class="order__dimension-span fs-4 fw-bold" id="dimension-span3">35 sm</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="order__vegetable">
+                <h3 class="order__vegetable-title fs-4 fw-bold">Ustiga nima solaylik?</h3>
+                <div class="order__vegetable-label-box d-flex flex-wrap">
+                  <label class="order__vegetables-label fs-5 my-1" id="vegetable-label1">
+                    <input class="order__vegetable-input" type="checkbox" name="" id="">
+                    <span class="order__vegetable-span me-2"></span>
+                    <p class="order__vegetable-text d-inline" id="order__vegetable-text1">Pomidor</p>
+                  </label>
+                  <label class="order__vegetables-label fs-5 my-1" id="vegetable-label2">
+                    <input class="order__vegetable-input" type="checkbox" name="" id="">
+                    <span class="order__vegetable-span me-2"></span>
+                    <p class="order__vegetable-text d-inline" id="order__vegetable-text2">Tuzlangan bodring</p>
+
+                  </label>
+                  <label class="order__vegetables-label fs-5 my-1" id="vegetable-label3">
+                    <input class="order__vegetable-input" type="checkbox" name="" id="">
+                    <span class="order__vegetable-span me-2"></span>
+                    <p class="order__vegetable-text d-inline" id="order__vegetable-text3">Kurka go'shti</p>
+
+                  </label>
+                  <label class="order__vegetables-label fs-5 my-1" id="vegetable-label4">
+                    <input class="order__vegetable-input" type="checkbox" name="" id="">
+                    <span class="order__vegetable-span me-2"></span>
+                    <p class="order__vegetable-text d-inline" id="order__vegetable-text4">Qo'ziqorin</p>
+
+                  </label>
+                  <label class="order__vegetables-label fs-5 my-1" id="vegetable-label5">
+                    <input class="order__vegetable-input" type="checkbox" name="" id="">
+                    <span class="order__vegetable-span me-2"></span>
+                    <p class="order__vegetable-text d-inline" id="order__vegetable-text5">Zaytun</p>
+
+                  </label>
+                  <label class="order__vegetables-label fs-5 my-1" id="vegetable-label6">
+                    <input class="order__vegetable-input" type="checkbox" name="" id="">
+                    <span class="order__vegetable-span me-2"></span>
+                    <p class="order__vegetable-text d-inline" id="order__vegetable-text6">Qazi</p>
+
+                  </label>
+                </div>
+              </div>
+
+              <div class="order__extra">
+                <h3 class="order__extra-title fs-4 fw-bold mb-3">Qo'shimchalar: </h3>
+                <label class="order__extra-label fs-5">
+                  <input type="checkbox" class="order__extra-input">
+                  <span class="order__extra-span d-inline-block me-2"></span>
+                  <p class="order__extra-text d-inline" id="order__extra-text1">Acchiq</p>
+                </label>
+                <label class="order__extra-label fs-5">
+                  <input type="checkbox" class="order__extra-input">
+                  <span class="order__extra-span d-inline-block me-2"></span>
+                  <p class="order__extra-text d-inline" id="order__extra-text2">Sosiskali</p>
+                </label>
+              </div>
+            </form>
+          </div>
+          <div class="col-4 border border-3 border-dark d-flex flex-column gap-3 p-3">
+            <div class="order__bread">
+              <h3 class="order__bread-title fs-4 fw-bold d-inline">Non: </h3>
+              <p class="order__bread-text d-inline fs-4">yupqa</p>
+            </div>
+            <div class="order__dimension-box">
+              <h3 class="order__dimension-title fs-4 fw-bold d-inline">Kattaligi: </h3>
+              <p class="order__dimension-text d-inline fs-4">0</p>
+            </div>
+            <div class="order__vegetable-box">
+              <h3 class="order__vegetable-box-title fs-4 fw-bold">Ustida: </h3>
+              <ul class="order__vegetable-box-list">
+                <li class="order__vegetable-box-item d-none fs-5" id="order__vegetable-box-item1">Pomidor</li>
+                <li class="order__vegetable-box-item d-none fs-5" id="order__vegetable-box-item2">Tuzlangan bodring</li>
+                <li class="order__vegetable-box-item d-none fs-5" id="order__vegetable-box-item3">Kurka go'shti</li>
+                <li class="order__vegetable-box-item d-none fs-5" id="order__vegetable-box-item4">Qo'ziqorin</li>
+                <li class="order__vegetable-box-item d-none fs-5" id="order__vegetable-box-item5">Zaytun</li>
+                <li class="order__vegetable-box-item d-none fs-5" id="order__vegetable-box-item6">Qazi</li>
+              </ul>
+            </div>
+            <div class="order__extra-box">
+              <h3 class="order__extra-box-title fs-4 fw-bold">Qo'shimcha: </h3>
+              <ul class="order__extra-box-list">
+                <li id="order__extra-item1" class="fs-5 d-none">Acchiq</li>
+                <li id="order__extra-item2" class="fs-5 d-none">Sosiskali</li>
+              </ul>
+            </div>
+            <button class="btn btn-danger py-2 px-4">Buyurtma berish</button>
+          </div>
+        </div>
       </div>
     </section>
     <!-- hero-section end -->
+
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/main.js"></script>
   </main>
-  <!-- MAIN END -->
-
-  <!-- FOOTER START -->
-  <footer class="footer">
-    <div class="container">
-
-    </div>
-  </footer>
-  <!-- FOOTER END -->
 </body>
 </html>
